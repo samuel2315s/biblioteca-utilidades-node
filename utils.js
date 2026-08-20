@@ -1,5 +1,11 @@
-function esPalindromo(texto) {
-    const textoLimpio = texto.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const textoReverso = textoLimpio.split('').reverse().join('');
-    return textoLimpio === textoReverso;
+function fibonacci(n) {
+    let numeros = [0, 1];
+
+    for (let i = 2; i < n; i++) {
+        numeros.push(numeros[i - 1] + numeros[i - 2]);
+    }
+
+    return numeros.slice(0, n);
 }
+
+console.log(fibonacci(10));
